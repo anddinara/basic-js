@@ -9,11 +9,7 @@ module.exports = function transform(arr) {
   console.log(sort);
   
   for (let i = 0; i < sort.length; i++) {
-    // while (arr.indexOf('--discard-next') !== -1) {
-    //   arr.splice(arr.indexOf('--discard-next'), 2);      
-    // }
-    
-    
+
     if (sort[i] === '--discard-next') {
       delete sort[i];
       delete sort[i+1];
@@ -32,6 +28,4 @@ module.exports = function transform(arr) {
   });
   
   return filtered;
-  // throw new CustomError('Not implemented');
-  // remove line with error and write your code here
 };

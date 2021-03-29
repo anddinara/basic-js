@@ -14,6 +14,4 @@ module.exports = function getSeason(date) {
   } else if (month === 8 || month === 9 || month === 10) {
     return 'fall';
   }
-  // throw new CustomError('Not implemented');
-  // remove line with error and write your code here
 };

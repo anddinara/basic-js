@@ -27,9 +27,4 @@ module.exports = function repeater(str, options) {
   }
   result = result.join(options.separator);
   return result;
-  // console.log(arr1);
-  // console.log(result);
-  // throw new CustomError('Not implemented');
-  // remove line with error and write your code here
 };
-  

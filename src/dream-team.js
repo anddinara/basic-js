@@ -16,6 +16,4 @@ module.exports = function createDreamTeam(arr) {
   });
   console.log(str);
   return str.split('').sort().join('');
-  // throw new CustomError('Not implemented');
-  // remove line with error and write your code here
 };

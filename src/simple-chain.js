@@ -9,36 +9,31 @@ const chainMaker = {
     this.chain.push(`( ${value} )`);
     return this;
   },
-  removeLink(position) {
+  removeLink(position) {    
     try {
-      if (typeof position === 'number' && position > 1) {
+      if (typeof position === 'number' && position >= 1 && 
+          position <= this.chain.length && !isNaN(position)) {
+        position = Math.round(position);
         this.chain.splice(position - 1, 1);
         return this;
       } else {
         this.chain = [];
-        throw new CustomError('Not implemented');
+        throw new Error();
       }
     } catch (e) {
       this.chain = [];
-      throw new CustomError('Not implemented');
+      throw new Error();
     }
-    // throw new CustomError('Not implemented');
-    // remove line with error and write your code here
   },
   reverseChain() {
     this.chain.reverse();
     return this;
-    // throw new CustomError('Not implemented');
-    // remove line with error and write your code here
   },
   finishChain() {
     let result = this.chain.join('~~');
     this.chain = [];
     return result;
-    // throw new CustomError('Not implemented');
-    // remove line with error and write your code here
   }
 };
-
 
 module.exports = chainMaker;

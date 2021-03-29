@@ -16,6 +16,4 @@ module.exports = function dateSample(number) {
   } else {
     return false;
   }
-  // throw new CustomError('Not implemented');
-  // remove line with error and write your code here
 };
